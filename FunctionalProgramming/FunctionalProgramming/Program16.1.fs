@@ -3,9 +3,11 @@
 //16.1. Напишите функцию-предикат notDivisible: int * int -> bool, где notDivisible(n,m) возвращает true, если число n -- делитель числа m.
 let notDivisible (n, m) = 
     match m % n with
-    | 0 -> false
-    | _ -> true
+    | 0 -> true
+    | _ -> false
 
+let result = notDivisible(2, 4)
+printfn "%b" result
 
 let rec prime2 (n, m) = 
     match m with
@@ -13,7 +15,6 @@ let rec prime2 (n, m) =
     | _ -> match n % m with
         | 0 -> false
         | _ -> prime2(n, m - 1)
-
 
 //16.2. Напишите функцию-предикат prime: int -> bool, где prime(n) возвращает true, если n -- простое число.
 let prime (n) = 
