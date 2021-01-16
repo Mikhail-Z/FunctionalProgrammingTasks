@@ -17,5 +17,5 @@ let occFromIth (s: string, n, c) =
         match i with
         | len when len = String.length s -> acc
         | j when s.[j] = c ->  occFromIthRec (acc + 1) (i + 1)
-        | _ -> occFromIthRec (acc + 1) i
+        | _ -> occFromIthRec acc (i + 1)
     occFromIthRec 0, n
