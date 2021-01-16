@@ -4,7 +4,7 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
-
+  
   <ItemGroup>
     <Compile Include="Program17.fs" />
     <!--<Compile Include="Program16.1.fs" />
