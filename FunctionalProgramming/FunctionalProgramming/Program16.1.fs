@@ -1,4 +1,4 @@
-﻿module Program81
+﻿module Program16
 
 //16.1. Напишите функцию-предикат notDivisible: int * int -> bool, где notDivisible(n,m) возвращает true, если число n -- делитель числа m.
 let notDivisible (n, m) = 
