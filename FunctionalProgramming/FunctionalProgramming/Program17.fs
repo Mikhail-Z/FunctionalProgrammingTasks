@@ -1,7 +1,6 @@
-﻿module Program17
-
-//17.4.1. Напишите функцию pow: string * int -> string, где pow(s,n) выдаёт строку s, повторенную n раз.
+﻿//17.4.1. Напишите функцию pow: string * int -> string, где pow(s,n) выдаёт строку s, повторенную n раз.
 let rec pow = function 
+    | (_, 0) -> ""
     | (s, 1) -> s
     | (s, n) -> s + pow(s, n - 1)
 
@@ -18,4 +17,4 @@ let occFromIth (s: string, n, c) =
         | len when len = String.length s -> acc
         | j when s.[j] = c ->  occFromIthRec (acc + 1) (i + 1)
         | _ -> occFromIthRec acc (i + 1)
-    occFromIthRec 0, n
+    occFromIthRec 0 n
