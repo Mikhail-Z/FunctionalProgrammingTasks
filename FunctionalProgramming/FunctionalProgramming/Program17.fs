@@ -5,9 +5,10 @@ let rec pow = function
     | (s, n) -> s + pow(s, n - 1)
 
 //17.4.2. Напишите функцию-предикат isIthChar: string * int * char -> bool, где isIthChar(s,n,c) проверяет, равен ли n-й (начиная с нуля) символ строки s символу c.
-let isIthChar (s: string, n, c) =
-    match s.[n] with
-    | c2 when c2 = c -> true
+let isIthChar (s: string, n, c: char) =
+    match n with
+    | m when m < 0 || m >= s.Length -> false
+    | m when s.[m] = c -> true
     | _ -> false
 
 //17.4.3. Напишите функцию occFromIth: string * int * char -> int, где occFromIth(s,n,c) возвращает количество вхождений символа с в строке s, начиная с позиции n.
