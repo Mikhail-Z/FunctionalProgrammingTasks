@@ -18,4 +18,4 @@ uncurry g -- это функция f, где f(x,y) -- это значение h
 *)
 
 let curry f = fun x y -> f(x, y)
-let uncarry f = fun (x, y) -> f(x) y
+let uncurry f = fun (x, y) -> f(x) y
