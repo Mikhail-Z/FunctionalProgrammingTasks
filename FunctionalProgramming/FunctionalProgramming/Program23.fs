@@ -45,6 +45,5 @@ let (.*) x y =
     (a * c - b * d, b * c + a * d)
 
 let (./) x y = 
-    let (a, b) = x
     let (c, d) = y
-    x .* (c/(c * c + d * d), -d / (c * c + d * d))
+    x .* (c/(c * c + d * d), -d / (c * c + d * d))  
