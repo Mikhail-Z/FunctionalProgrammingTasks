@@ -12,6 +12,7 @@ type TimeOfDay = { hours: int; minutes: int; f: F }
 let (.>.) x y =
     match (x.f, y.f) with
     |   (PM, AM) -> true
+    |   (AM, PM) -> false
     |   _ -> match x.hours.CompareTo(y.hours) with
         |   1 -> true
         |   -1 -> false
