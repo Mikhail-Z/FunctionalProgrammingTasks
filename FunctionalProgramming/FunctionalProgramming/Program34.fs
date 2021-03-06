@@ -18,8 +18,6 @@ let rec dnto n = match n with
 //34.3. Напишите функцию evenn: int -> int list, которая генерирует список из первых n неотрицательных чётных чисел.
 let rec evennrec n m = match n with
 |   0 -> []
-|   _ -> match m % 2 with
-    |   0 -> m :: evennrec (n - 1) (m + 1)
-    |   _ -> evennrec (n - 1) (m + 1)
+|   _ -> m * 2 :: evennrec (n - 1) (m + 1)
 
-let rec evenn n = evennrec (n + 1) 0
+let rec evenn n = evennrec n 0
