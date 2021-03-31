@@ -57,7 +57,7 @@ let rec delete (n, xs) = match xs with
 
 let rec sort = fun xs -> 
     let min = smallest xs
-    if (min.IsSome) then min::sort (delete (min.Value, xs)) else []
+    if (min.IsSome) then min.Value::sort (delete (min.Value, xs)) else []
 
 
 let rec revrev = fun xs ->
