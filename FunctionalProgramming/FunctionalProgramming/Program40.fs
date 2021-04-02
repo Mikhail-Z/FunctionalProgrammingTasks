@@ -1,8 +1,8 @@
 ﻿module Program40
 
-let rec sum p xs = match xs with
+let rec sum (p, xs) = match xs with
     |   [] -> 0
-    |   x::tail -> if (p x) then x + sum p tail else sum p tail
+    |   x::tail -> if (p x) then x + sum (p, tail) else sum (p, tail)
 
 
 let rec count (xs, n) = match xs with
@@ -40,7 +40,7 @@ let rec minus (xs1, xs2) = match (xs1, xs2) with
 |   _ -> []
 
 
-let rec smallest xs =
+let rec smallest = fun xs ->
     let rec smallestInternal (xs, curMin) = match xs with
     |   [] -> Some curMin
     |   head::tail -> if head < curMin then smallestInternal (tail, head) else smallestInternal (tail, curMin)
@@ -63,7 +63,7 @@ let rec sort = fun xs ->
 let rec revrev = fun xs ->
     let rec rev xss = match xss with
     |   [] -> []
-    |   head::tail -> (rev tail)@[head] 
+    |   head::tail -> (rev tail)@[head]
 
     match xs with
     |   [] -> []
