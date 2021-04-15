@@ -15,6 +15,4 @@ let sum (p, xs) =
 // 41.4.3. Напишите функцию revrev, которая получает на вход список списков, и перевёртывает как порядок вложенных списков, так и порядок элементов внутри каждого вложенного списка.
 let revrev = fun xs ->
     let foldFunc x tail = (List.rev tail)::x
-    List.fold foldFunc xs 
-    
-
+    List.fold foldFunc [] xs
