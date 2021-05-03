@@ -28,6 +28,3 @@ let fibo n =
     |   _ -> for i = 3 to n do fib()
 
     acc
-
-let result = fibo 7
-printfn "%A" result
