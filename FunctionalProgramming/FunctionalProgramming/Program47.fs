@@ -16,11 +16,18 @@ let fibo n =
     let mutable prevprev = 0
     let mutable prev = 1
     let mutable acc = 0
+    
     let fib() =
         acc <- prev + prevprev
         prevprev <- prev
         prev <- acc
         
-    for i = 3 to n do
-        fib()
+    match n with
+    |   1 -> acc <- prevprev
+    |   2 -> acc <- prev
+    |   _ -> for i = 3 to n do fib()
+
     acc
+
+let result = fibo 7
+printfn "%A" result
