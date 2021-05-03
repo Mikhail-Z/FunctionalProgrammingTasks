@@ -25,6 +25,6 @@ let fibo n =
     match n with
     |   1 -> acc <- prevprev
     |   2 -> acc <- prev
-    |   _ -> for i = 3 to n do fib()
+    |   _ -> for i = 3 to n + 1 do fib()
 
     acc
