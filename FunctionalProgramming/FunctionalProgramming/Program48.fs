@@ -6,12 +6,12 @@ let rec fibo1 n n1 n2 =
     |   1 -> 1
     |   2 -> n1 + n2
     |   _ -> fibo1 (n-1) (n1+n2) n1
-
-let rec fibo2 c n = 
+    
+let rec fibo2 n c = 
     match n with
     |   0 -> c 0
     |   1 -> c 1
-    |   _ -> (fibo2 (fun x -> c x) (n-1) + fibo2 (fun x -> c x) (n-2))
+    |   _ -> (fibo2 (n-1) (fun x -> c x) + fibo2 (n-2) (fun x -> c x))
 
 
 let rec bigList n k =
